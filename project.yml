@@ -1,0 +1,29 @@
+name: (AppName)
+targets:
+  (AppName)App:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources: Sources/(AppName)
+    # dependencies:
+    scheme:
+      testTargets:
+        - (AppName)AppTests
+  (AppName)AppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: Tests/(AppName)Tests
+    dependencies:
+      - target: (AppName)App
+    scheme:
+      testTargets:
+        - (AppName)AppTests
+  (AppName)UITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: Tests/(AppName)UITests
+    dependencies:
+      - target: (AppName)App
+    scheme:
+      testTargets:
+        - (AppName)UITests
