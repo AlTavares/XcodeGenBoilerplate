@@ -1,4 +1,6 @@
 name: (AppName)
+options:
+  bundleIdPrefix: com.myapp
 targets:
   (AppName)App:
     type: application
